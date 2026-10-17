@@ -1,0 +1,11 @@
+---
+import Default from '@astrojs/starlight/components/Footer.astro';
+import HomeCta from './HomeCta.astro';
+
+// The home page closes with a call to action; every other page keeps Starlight's footer as is.
+const route = Astro.locals.starlightRoute;
+const isHome = route.id === '' || route.entry.id === 'index' || route.entry.id === '';
+---
+
+{isHome && <HomeCta />}
+<Default />

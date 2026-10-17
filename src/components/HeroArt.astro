@@ -1,0 +1,115 @@
+---
+// Home illustration: a real-looking Fufa conversation. Channels feed the inbox (behind);
+// in front, a WhatsApp customer asks about a dress, the agent answers with a product and the order is confirmed.
+// Colours come from --fd-ill-* tokens in design.css so it follows light and dark mode.
+const channels = [
+	{ fill: '#25D366', glyph: '<path d="M15.5 31l1.5-4.6A9 9 0 1 1 20.4 30z"/>' },
+	{ fill: 'url(#fd-ig)', glyph: '<rect x="14" y="14" width="18" height="18" rx="5.5"/><circle cx="23" cy="23" r="4.3"/>' },
+	{ fill: 'var(--fd-green)', glyph: '<path d="M14 16.5a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3h-7l-5 4v-4a3 3 0 0 1-3-3z"/>' },
+	{ fill: '#2F6FED', glyph: '<rect x="13.5" y="16" width="19" height="14" rx="2.5"/><path d="M14 17.5l9 6.5 9-6.5"/>' },
+	{ fill: '#2AABEE', glyph: '<path d="M13.5 22.5L32 15l-3.5 17-5.5-5-3 3-.5-5 8-7.5-9.5 6z"/>' },
+	{ fill: 'var(--fd-ill-phone)', glyph: '<path d="M18.5 14.5l3 4-2.3 2.2a11 11 0 0 0 5.1 5.1l2.2-2.3 4 3-1.7 3.2c-7.3-.3-13.2-6.2-13.5-13.5z"/>' },
+];
+// tiles: a straight column in a dock attached to the inbox's left edge
+const TILE = 38, GAP = 10, DOCK_X = 56, DOCK_Y = 92;
+const tiles = channels.map((c, i) => ({ ...c, x: DOCK_X + 9, y: DOCK_Y + 10 + i * (TILE + GAP) }));
+const DOCK_H = channels.length * (TILE + GAP) - GAP + 20;
+const rows = [
+	{ c: '#25D366', name: 'Priya Sharma', msg: 'COD please', on: true },
+	{ c: '#D62976', name: 'Arjun M.', msg: 'Size chart for kurtas?' },
+	{ c: '#2F6FED', name: 'neha@gmail.com', msg: 'Where is my order?' },
+	{ c: '#2AABEE', name: 'Rahul', msg: 'Is this original?' },
+	{ c: '#3d8b6a', name: 'Website visitor', msg: 'Do you ship to Pune?' },
+];
+---
+
+<svg class="fd-hero-art" viewBox="0 0 600 500" role="img" aria-label="A WhatsApp customer asks Fufa about a linen dress; the AI agent replies with the product, and the order is confirmed. Messages from WhatsApp, Instagram, live chat, email, Telegram and phone feed one inbox.">
+	<defs>
+		<linearGradient id="fd-ig" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#FEDA75" /><stop offset=".35" stop-color="#FA7E1E" /><stop offset=".65" stop-color="#D62976" /><stop offset="1" stop-color="#4F5BD5" /></linearGradient>
+		<linearGradient id="fd-dress" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cfe3cf" /><stop offset="1" stop-color="#a9c9ad" /></linearGradient>
+		<filter id="fd-soft" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="14" stdDeviation="16" style="flood-color: var(--fd-ill-shadow)" /></filter>
+		<filter id="fd-soft-sm" x="-40%" y="-80%" width="180%" height="300%"><feDropShadow dx="0" dy="6" stdDeviation="8" style="flood-color: var(--fd-ill-shadow)" /></filter>
+		<clipPath id="fd-chat-clip"><rect x="252" y="96" width="330" height="376" rx="22" /></clipPath>
+	</defs>
+
+	<!-- inbox (behind) -->
+	<g filter="url(#fd-soft)">
+		<rect x="112" y="40" width="300" height="400" rx="22" fill="var(--fd-ill-panel-2)" stroke="var(--fd-ill-line)" />
+	</g>
+	<text x="136" y="76" class="fd-ill-text" font-size="15" font-weight="650" fill="var(--fd-ill-ink)">Inbox</text>
+	<rect x="190" y="62" width="34" height="18" rx="9" fill="var(--fd-ill-select)" />
+	<text x="207" y="75" class="fd-ill-text" font-size="10.5" font-weight="650" text-anchor="middle" fill="var(--fd-ill-accent-ink)">12</text>
+	{rows.map((r, i) => (
+		<g transform={`translate(0 ${96 + i * 58})`}>
+			{r.on && <rect x="124" y="0" width="128" height="50" rx="12" fill="var(--fd-ill-select)" />}
+			<circle cx="146" cy="25" r="11" fill={r.c} />
+			<text x="146" y="29" class="fd-ill-text" font-size="10.5" font-weight="700" text-anchor="middle" fill="#fff">{r.name[0].toUpperCase()}</text>
+			<text x="164" y="21" class="fd-ill-text" font-size="11.5" font-weight="650" fill="var(--fd-ill-ink)">{r.name}</text>
+			<text x="164" y="37" class="fd-ill-text" font-size="10.5" fill="var(--fd-ill-muted-text)">{r.msg}</text>
+		</g>
+	))}
+
+	<!-- chat (front) -->
+	<g filter="url(#fd-soft)">
+		<rect x="252" y="96" width="330" height="376" rx="22" fill="var(--fd-ill-panel)" stroke="var(--fd-ill-line)" />
+	</g>
+	<g clip-path="url(#fd-chat-clip)">
+		<rect x="252" y="96" width="330" height="58" fill="var(--fd-ill-head)" />
+		<path d="M252 154h330" stroke="var(--fd-ill-line)" />
+		<circle cx="280" cy="125" r="14" fill="#25D366" />
+		<text x="280" y="130" class="fd-ill-text" font-size="12.5" font-weight="700" text-anchor="middle" fill="#fff">P</text>
+		<text x="302" y="121" class="fd-ill-text" font-size="13" font-weight="650" fill="var(--fd-ill-ink)">Priya Sharma</text>
+		<text x="302" y="137" class="fd-ill-text" font-size="10.5" fill="var(--fd-ill-muted-text)">WhatsApp · Mumbai</text>
+		<rect x="480" y="114" width="88" height="22" rx="11" fill="var(--fd-lime)" />
+		<path d="M492 118.5l1.4 3.4 3.4 1.4-3.4 1.4-1.4 3.4-1.4-3.4-3.4-1.4 3.4-1.4z" fill="#14161B" />
+		<text x="502" y="129" class="fd-ill-text" font-size="10.5" font-weight="700" fill="#14161B">Fufa agent</text>
+	</g>
+
+	<!-- customer -->
+	<rect x="268" y="170" width="196" height="38" rx="14" fill="var(--fd-ill-bubble)" />
+	<text x="282" y="194" class="fd-ill-text" font-size="12" fill="var(--fd-ill-ink)">Linen dress in size M?</text>
+
+	<!-- agent reply with product -->
+	<rect x="330" y="220" width="236" height="150" rx="16" fill="var(--fd-ill-agent)" />
+	<text x="346" y="244" class="fd-ill-text" font-size="12" fill="var(--fd-ill-agent-ink)">Yes! Sage green is in stock in M.</text>
+	<rect x="342" y="256" width="212" height="100" rx="12" fill="var(--fd-ill-panel)" />
+	<rect x="350" y="264" width="64" height="84" rx="9" fill="url(#fd-dress)" />
+	<path d="M376 276l-7 9 4 3-5 26 30 0-5-26 4-3-7-9c-2 4-12 4-14 0z" fill="#f4f8f2" opacity=".9" />
+	<text x="424" y="282" class="fd-ill-text" font-size="11.5" font-weight="650" fill="var(--fd-ill-ink)">Linen Wrap Dress</text>
+	<text x="424" y="298" class="fd-ill-text" font-size="10.5" fill="var(--fd-ill-muted-text)">Sage green · M</text>
+	<text x="424" y="317" class="fd-ill-text" font-size="13" font-weight="700" fill="var(--fd-ill-ink)">₹2,124</text>
+	<rect x="424" y="326" width="70" height="22" rx="11" fill="var(--fd-lime)" />
+	<text x="459" y="341" class="fd-ill-text" font-size="10.5" font-weight="700" text-anchor="middle" fill="#14161B">Buy now</text>
+
+	<!-- customer replies -->
+	<rect x="268" y="384" width="110" height="36" rx="14" fill="var(--fd-ill-bubble)" />
+	<text x="282" y="407" class="fd-ill-text" font-size="12" fill="var(--fd-ill-ink)">COD please</text>
+
+	<!-- order confirmed -->
+	<g class="fd-toast">
+		<g filter="url(#fd-soft-sm)"><rect x="378" y="430" width="196" height="44" rx="22" fill="var(--fd-ill-panel)" stroke="var(--fd-ill-line)" /></g>
+		<circle cx="400" cy="452" r="11" fill="#2E7D4F" />
+		<path d="M395 452l3.5 3.5 6-7" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+		<text x="419" y="449" class="fd-ill-text" font-size="11.5" font-weight="650" fill="var(--fd-ill-ink)">Order #8821 confirmed</text>
+		<text x="419" y="463" class="fd-ill-text" font-size="10" fill="var(--fd-ill-muted-text)">COD · arriving Thursday</text>
+	</g>
+
+	<!-- replied-in badge -->
+	<g class="fd-badge">
+		<g filter="url(#fd-soft-sm)"><rect x="468" y="62" width="112" height="28" rx="14" fill="var(--fd-ill-panel)" stroke="var(--fd-ill-line)" /></g>
+		<path d="M484 69l-5 8h4l-2 7 6-9h-4z" fill="var(--fd-lime-ink)" />
+		<text x="494" y="80" class="fd-ill-text" font-size="11" font-weight="650" fill="var(--fd-ill-ink)">Replied in 3 s</text>
+	</g>
+
+	<!-- channel dock on the inbox edge -->
+	<g filter="url(#fd-soft-sm)">
+		<rect x={DOCK_X} y={DOCK_Y} width={TILE + 18} height={DOCK_H} rx="18" fill="var(--fd-ill-panel)" stroke="var(--fd-ill-line)" />
+	</g>
+	{tiles.map((t, i) => (
+		<g transform={`translate(${t.x} ${t.y}) scale(${TILE / 44})`}>
+			<rect width="44" height="44" rx="13" fill={t.fill} />
+			<g fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" transform="translate(-1 -1)" set:html={t.glyph} />
+			{i === 0 && <g class="fd-unread"><circle cx="42" cy="2" r="8" fill="#E5484D" stroke="var(--fd-ill-panel)" stroke-width="3" /><text x="42" y="6" class="fd-ill-text" font-size="10" font-weight="700" text-anchor="middle" fill="#fff">3</text></g>}
+		</g>
+	))}
+</svg>

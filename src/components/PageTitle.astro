@@ -1,0 +1,20 @@
+---
+import Default from '@astrojs/starlight/components/PageTitle.astro';
+import GroupIcon from './GroupIcon.astro';
+
+// Adds the group eyebrow ("Channels", "Agents"…) with its icon above each task page's title.
+const LABELS: Record<string, string> = {
+	start: 'Start', channels: 'Channels', inbox: 'Inbox', contacts: 'Contacts', campaigns: 'Campaigns',
+	agents: 'Agents', workflows: 'Workflows', commerce: 'Commerce', workspace: 'Workspace',
+};
+const id = Astro.locals.starlightRoute.entry.id;
+const group = id.includes('/') ? id.split('/')[0] : '';
+---
+
+{group && LABELS[group] && (
+	<span class="fd-eyebrow" data-group={group}>
+		<span class="fd-eyebrow-icon"><GroupIcon group={group} size={15} /></span>
+		{LABELS[group]}
+	</span>
+)}
+<Default />

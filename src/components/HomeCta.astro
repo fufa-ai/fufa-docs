@@ -1,0 +1,50 @@
+---
+import { LinkButton } from '@astrojs/starlight/components';
+import logo from '../assets/logo.png';
+
+// Closing band for the home page: rings radiate from the Fufa mark, with each channel sitting on a ring.
+// The art lives in its own column on the right and fades out before it reaches the text.
+const rings = [70, 120, 170, 220, 270];
+// Channel tiles on the rings; glyphs drawn on a 46px tile, the same set as the hero art.
+const dots = [
+	{ r: 120, a: 215, fill: '#25D366', glyph: '<path d="M16.4 30.6l1.4-4.4a9 9 0 1 1 3.4 3.3z"/>' },
+	{ r: 170, a: 150, fill: 'url(#fd-cta-ig)', glyph: '<rect x="14" y="14" width="18" height="18" rx="5.5"/><circle cx="23" cy="23" r="4.3"/>' },
+	{ r: 170, a: 210, fill: '#2AABEE', glyph: '<path d="M13.5 22.5L32 15l-3.5 17-5.5-5-3 3-.5-5 8-7.5-9.5 6z"/>' },
+	{ r: 220, a: 172, fill: '#2F6FED', glyph: '<rect x="13.5" y="16" width="19" height="14" rx="2.5"/><path d="M14 17.5l9 6.5 9-6.5"/>' },
+	{ r: 120, a: 145, fill: '#2f7a5b', glyph: '<path d="M14 16.5a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3h-7l-5 4v-4a3 3 0 0 1-3-3z"/>' },
+	{ r: 220, a: 196, fill: '#1b1d22', glyph: '<path d="M18.5 14.5l3 4-2.3 2.2a11 11 0 0 0 5.1 5.1l2.2-2.3 4 3-1.7 3.2c-7.3-.3-13.2-6.2-13.5-13.5z"/>' },
+];
+const TILE = 30;
+const at = (r: number, deg: number) => [300 + r * Math.cos((deg * Math.PI) / 180), 160 + r * Math.sin((deg * Math.PI) / 180)];
+---
+
+<section class="fd-cta" aria-labelledby="fd-cta-title">
+	<div class="fd-cta-copy">
+		<p class="fd-cta-kicker">Ready when you are</p>
+		<h2 id="fd-cta-title">Go live in an afternoon. <em>Your agent takes it from there.</em></h2>
+		<p class="fd-cta-text">Create a workspace, connect a channel and turn on an agent. The setup thread in your inbox walks you through it.</p>
+		<div class="fd-cta-actions">
+			<LinkButton href="/start/create-a-workspace/" icon="right-arrow">Get your store live</LinkButton>
+			<LinkButton href="https://app.fufa.ai" variant="minimal" icon="external">Open Fufa</LinkButton>
+		</div>
+	</div>
+	<div class="fd-cta-art" aria-hidden="true">
+		<svg viewBox="0 0 400 320">
+			<defs>
+				<linearGradient id="fd-cta-ig" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#FEDA75" /><stop offset=".35" stop-color="#FA7E1E" /><stop offset=".65" stop-color="#D62976" /><stop offset="1" stop-color="#4F5BD5" /></linearGradient>
+				<radialGradient id="fd-cta-glow"><stop offset="0" stop-color="var(--fd-lime)" stop-opacity=".45" /><stop offset="1" stop-color="var(--fd-lime)" stop-opacity="0" /></radialGradient>
+			</defs>
+			<circle cx="300" cy="160" r="120" fill="url(#fd-cta-glow)" />
+			<g fill="none" stroke="#cfe8d8">
+				{rings.map((r, i) => <circle class="fd-ring" cx="300" cy="160" r={r} stroke-opacity={0.32 - i * 0.045} stroke-width="1" style={`animation-delay:${i * 0.5}s`} />)}
+			</g>
+			{dots.map(({ r, a, fill, glyph }, i) => { const [x, y] = at(r, a); return (
+				<g class="fd-cta-tile" style={`animation-delay:${-i * 0.9}s`} transform={`translate(${x - TILE / 2} ${y - TILE / 2}) scale(${TILE / 46})`}>
+					<rect width="46" height="46" rx="13" fill={fill} stroke="rgb(255 255 255 / .18)" stroke-width="1.5" />
+					<g fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" set:html={glyph} />
+				</g>
+			); })}
+		</svg>
+		<img class="fd-cta-mark" src={logo.src} alt="" width="76" height="76" />
+	</div>
+</section>

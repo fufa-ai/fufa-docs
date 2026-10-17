@@ -1,0 +1,18 @@
+---
+// Line icons for the sidebar groups, drawn on a 24px grid with currentColor strokes.
+interface Props { group: string; size?: number }
+const { group, size = 16 } = Astro.props;
+const paths: Record<string, string> = {
+	start: '<path d="M5 21V4"/><path d="M5 4h11l-2 4 2 4H5"/>',
+	channels: '<path d="M4.9 16.1a10 10 0 0 1 0-8.2"/><path d="M19.1 7.9a10 10 0 0 1 0 8.2"/><path d="M8 13.7a4.5 4.5 0 0 1 0-3.4"/><path d="M16 10.3a4.5 4.5 0 0 1 0 3.4"/><circle cx="12" cy="12" r="1.4"/>',
+	inbox: '<path d="M3 13h5l1.5 3h5L16 13h5"/><path d="M5.5 5h13L21 13v5a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-5z"/>',
+	contacts: '<circle cx="9" cy="8" r="3.5"/><path d="M3 20c.8-3.5 3.2-5.5 6-5.5s5.2 2 6 5.5"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8"/><path d="M18 14.8c1.6.7 2.6 2.4 3 5.2"/>',
+	campaigns: '<path d="M4 10v4a1 1 0 0 0 1 1h3l7 4V5L8 9H5a1 1 0 0 0-1 1z"/><path d="M18.5 9a4 4 0 0 1 0 6"/><path d="M8 15l1.5 5"/>',
+	agents: '<path d="M12 3l1.8 4.6L18.5 9.4l-4.7 1.8L12 16l-1.8-4.8L5.5 9.4l4.7-1.8z"/><path d="M18.5 15.5l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/>',
+	workflows: '<circle cx="6" cy="6" r="2.2"/><circle cx="6" cy="18" r="2.2"/><circle cx="18" cy="12" r="2.2"/><path d="M6 8.2v7.6"/><path d="M8 7.2c4 .6 5.5 2 7.8 3.8"/>',
+	commerce: '<path d="M5 8h14l-1.2 11.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/>',
+	workspace: '<rect x="4" y="3.5" width="16" height="17" rx="1.5"/><path d="M8.5 8h2M13.5 8h2M8.5 12h2M13.5 12h2"/><path d="M10 20.5v-4h4v4"/>',
+};
+---
+
+<svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" set:html={paths[group] ?? ''} />

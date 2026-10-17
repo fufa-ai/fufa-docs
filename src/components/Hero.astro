@@ -1,0 +1,25 @@
+---
+import { LinkButton } from '@astrojs/starlight/components';
+import HeroArt from './HeroArt.astro';
+
+// Home hero: title, tagline and actions from the page's `hero` frontmatter, with the channels-to-inbox art.
+const { data } = Astro.locals.starlightRoute.entry;
+const { title = data.title, tagline, actions = [] } = data.hero || {};
+---
+
+<div class="fd-hero">
+	<div class="fd-hero-copy">
+		<span class="fd-hero-kicker"><span class="fd-dot"></span>Fufa documentation</span>
+		<h1 id="_top" data-page-title set:html={title} />
+		{tagline && <p class="fd-hero-tagline" set:html={tagline} />}
+		{actions.length > 0 && (
+			<div class="fd-hero-actions">
+				{actions.map(({ link, text, variant, icon }) => (
+					<LinkButton href={link} variant={variant} icon={icon?.name}>{text}</LinkButton>
+				))}
+			</div>
+		)}
+		<p class="fd-hero-machine">For AI assistants: <a href="/llms.txt">llms.txt</a> · <a href="/llms-full.txt">llms-full.txt</a> · add <code>.md</code> to any page</p>
+	</div>
+	<div class="fd-hero-art-wrap"><HeroArt /></div>
+</div>
