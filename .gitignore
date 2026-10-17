@@ -19,3 +19,7 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+# capture session
+scripts/capture/.auth.json
+scripts/capture/.ids.json

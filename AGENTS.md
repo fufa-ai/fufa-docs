@@ -74,6 +74,21 @@ Keep these heading names exactly as written, or the styling and the FAQ data won
 
 Before writing a step, find the label in `apps/web` in the monorepo and copy it exactly. Permissions come from `packages/shared/src/core/permissions.ts`. Don't describe behaviour you haven't found in the code or seen in the app.
 
+## Screenshots and clips
+
+Every image comes from `scripts/capture/capture.py`, never from a manual screenshot, so the whole set can be re-shot when the UI changes.
+
+- Add one function per page to the script. It drives the local app (web on `:3000`, API on `:3005`, with Redis and `apps/kb-worker` running) as the project's test user.
+- Screenshots are saved at 2x to `src/assets/screens/<group>/<page>/` and shown at 1x by `src/plugins/screens.mjs`. Use `s.shot(file, area, highlight=...)`: crop to the part of the screen the step is about, and ring the control the step names.
+- Clips are short and silent (under 15 seconds) and show one flow with motion. They are saved to `public/clips/<group>/<page>.webm` with a poster `.jpg`. Speed up waiting with `s.fast(n)`.
+- In the page, put a screenshot under the step it shows, as a plain markdown image with alt text that says what's on screen. Put a clip at the top of the section it covers:
+
+  ```html
+  <video class="fd-clip" src="/clips/agents/create-an-agent.webm" poster="/clips/agents/create-an-agent.jpg" autoplay muted loop playsinline aria-label="What the clip shows"></video>
+  ```
+
+- Run `python scripts/capture/capture.py <page>` from this folder with a Python that has Playwright, such as `../kb-worker/venv/bin/python`. Recording a clip creates real records in the local workspace, so use `--no-clips` while you iterate on screenshots.
+
 ## What the build publishes for machines
 
 - `/llms.txt`, `/llms-full.txt`, `/llms-small.txt`, plus the sets in `astro.config.mjs`, from `starlight-llms-txt`.

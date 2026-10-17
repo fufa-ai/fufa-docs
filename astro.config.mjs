@@ -4,6 +4,7 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import sitemap from '@astrojs/sitemap';
 import starlightLlmsTxt from 'starlight-llms-txt';
+import screens from './src/plugins/screens.mjs';
 
 const SITE = 'https://docs.fufa.ai';
 
@@ -40,6 +41,7 @@ const sidebar = GROUPS.filter(([dir]) => dir === 'start' || hasPages(dir)).map((
 export default defineConfig({
 	site: SITE,
 	integrations: [
+		screens(),
 		starlight({
 			title: 'Fufa Docs',
 			description:
