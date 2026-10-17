@@ -1,0 +1,51 @@
+/* App theme from apps/web/src/styles.css.
+   Starlight’s default :root is dark. Light mode flips --sl-color-white and --sl-color-black. */
+
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&family=Instrument+Serif:ital@0;1&display=swap");
+
+:root {
+	--sl-font: "Geist", var(--sl-font-system);
+	--sl-font-mono: "Geist Mono", var(--sl-font-system-mono);
+
+	--sl-hue-green: 163;
+	--sl-hue-orange: 65;
+
+	/* Dark: deep green-black like fufa.ai, cream text, mint and lime accents */
+	--sl-color-white: oklch(0.96 0.012 95);
+	--sl-color-gray-1: oklch(0.9 0.012 95);
+	--sl-color-gray-2: oklch(0.82 0.012 120);
+	--sl-color-gray-3: oklch(0.68 0.014 150);
+	--sl-color-gray-4: oklch(0.5 0.016 155);
+	--sl-color-gray-5: oklch(0.3 0.018 158);
+	--sl-color-gray-6: oklch(0.225 0.016 158);
+	--sl-color-black: oklch(0.172 0.013 158);
+
+	--sl-color-accent-low: oklch(0.3 0.06 160);
+	--sl-color-accent: oklch(0.78 0.12 158);
+	--sl-color-accent-high: oklch(0.9 0.07 150);
+	--sl-color-text-invert: oklch(0.17 0.013 158);
+	--sl-color-bg-nav: oklch(0.19 0.014 158);
+	--sl-color-bg-sidebar: oklch(0.185 0.014 158);
+	--sl-color-hairline-light: oklch(0.27 0.016 158);
+	--sl-color-hairline: oklch(0.25 0.016 158);
+}
+
+:root[data-theme="light"] {
+	--sl-color-white: oklch(0.25 0.01 60);
+	--sl-color-gray-1: oklch(0.28 0.01 60);
+	--sl-color-gray-2: oklch(0.32 0.012 60);
+	--sl-color-gray-3: oklch(0.42 0.01 60);
+	--sl-color-gray-4: oklch(0.5 0.01 60);
+	--sl-color-gray-5: oklch(0.9 0.01 80);
+	--sl-color-gray-6: oklch(0.93 0.01 80);
+	--sl-color-gray-7: oklch(0.99 0.005 80);
+	--sl-color-black: oklch(0.96 0.008 80);
+
+	--sl-color-accent-high: oklch(0.26 0.06 163.21);
+	--sl-color-accent: oklch(0.32 0.07 163.21);
+	--sl-color-accent-low: oklch(0.94 0.03 163);
+
+	--sl-color-text-invert: oklch(0.98 0 0);
+	--sl-color-bg-sidebar: oklch(0.99 0.005 80);
+	--sl-color-bg-nav: oklch(0.99 0.005 80);
+}
