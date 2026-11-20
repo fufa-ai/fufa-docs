@@ -16,6 +16,7 @@ const GROUP_LABELS: Record<string, string> = {
 	workflows: 'Workflows',
 	commerce: 'Commerce',
 	workspace: 'Workspace',
+	mcp: 'Fufa MCP',
 };
 
 /** Questions and answers from the "## Common questions" section, as plain text. */

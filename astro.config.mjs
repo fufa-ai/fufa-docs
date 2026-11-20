@@ -21,6 +21,7 @@ const GROUPS = [
 	['workflows', 'Workflows'],
 	['commerce', 'Commerce'],
 	['workspace', 'Workspace'],
+	['mcp', 'Fufa MCP'],
 ];
 const hasPages = (dir) => {
 	try {
@@ -78,6 +79,7 @@ export default defineConfig({
 					customSets: [
 						{ label: 'Getting live', description: 'The shortest path from sign-up to a live store: workspace, channels, inbox, team, agent and Shopify.', paths: ['index*', 'start/**', 'channels/**', 'inbox/**', 'workspace/**', 'agents/create-an-agent*', 'commerce/shopify*'] },
 						{ label: 'AI agents', description: 'Creating, teaching, testing and deploying Fufa AI agents.', paths: ['agents/**'] },
+						{ label: 'Fufa MCP', description: 'Connecting Claude and other AI clients to a Fufa workspace through the Fufa MCP server, and every tool it offers.', paths: ['mcp/**'] },
 					],
 				}),
 			],
