@@ -17,6 +17,7 @@ The sidebar follows a new customer through the product. One folder per group und
 | `workflows/` | Workflows | How a run moves, then only triggers and actions a customer sets up alone. |
 | `commerce/` | Commerce | Shopify, catalog, orders, abandoned carts. |
 | `workspace/` | Workspace | Team and roles, billing and credits, workspace settings. |
+| `mcp/` | Fufa MCP | What the MCP server can do, connecting Claude and other clients, example prompts. |
 
 A page shows up in the sidebar because its file exists. Set its position with `sidebar.order` in the frontmatter. A group with no pages stays hidden. When you add the first page to an empty group, restart `pnpm dev` so the group appears.
 
@@ -54,7 +55,7 @@ A direct answer in the first sentence, then detail.
 ```
 
 - **Common questions** becomes FAQ structured data automatically (see `src/route-data.ts`). Keep each answer self-contained, because it may be quoted alone.
-- Prefer slugs that name the thing (`channels/whatsapp`, `workspace/team`), so a title can change without breaking links. Use a short action slug only when there's no clear noun (`start/create-a-workspace`). Never rename a published slug.
+- Prefer slugs that name the thing (`channels/whatsapp`, `workspace/team`), so a title can change without breaking links. Never name a page `claude.md` or `agents.md`: macOS ignores case, so coding agents load it as their instructions file. Use a short action slug only when there's no clear noun (`start/create-a-workspace`). Never rename a published slug.
 - Link with absolute paths and a trailing slash: `[Connect WhatsApp](/channels/whatsapp/)`.
 - Asides use `:::note`, `:::tip` or `:::caution` blocks, sparingly.
 
