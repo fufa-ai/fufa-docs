@@ -20,6 +20,7 @@ const GROUPS = [
 	['agents', 'Agents'],
 	['workflows', 'Workflows'],
 	['commerce', 'Commerce'],
+	['reports', 'Reports'],
 	['workspace', 'Workspace'],
 	['mcp', 'Fufa MCP'],
 ];
@@ -80,6 +81,7 @@ export default defineConfig({
 						{ label: 'Getting live', description: 'The shortest path from sign-up to a live store: workspace, channels, inbox, team, agent and Shopify.', paths: ['index*', 'start/**', 'channels/**', 'inbox/**', 'workspace/**', 'agents/create-an-agent*', 'commerce/shopify*'] },
 						{ label: 'AI agents', description: 'Creating, teaching, testing and deploying Fufa AI agents.', paths: ['agents/**'] },
 						{ label: 'Fufa MCP', description: 'Connecting Claude and other AI clients to a Fufa workspace through the Fufa MCP server, and every tool it offers.', paths: ['mcp/**'] },
+						{ label: 'Using Fufa every day', description: 'Finding your way around, installing Fufa on your phone, notifications, and working the inbox.', paths: ['start/tour*', 'start/install-on-your-phone*', 'inbox/**'] },
 					],
 				}),
 			],
