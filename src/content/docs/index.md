@@ -41,10 +41,14 @@ Fufa is an AI customer platform for online stores. Messages from WhatsApp, your 
 
 - **Answer every channel in one place.** Connect [WhatsApp](/channels/whatsapp/), [live chat](/channels/live-chat/), [Instagram](/channels/instagram/), [email](/channels/email/), [Telegram](/channels/telegram/) and [phone](/channels/phone/), then [reply from the inbox](/inbox/reply/).
 - **Let an AI agent take the first reply.** [Create an agent](/agents/create-an-agent/), teach it your policies and products, and turn it on per channel. It looks up orders, recommends products and recovers carts.
-- **Know your customers.** Every conversation is tied to a contact with tags, attributes and segments.
-- **Send campaigns.** Message opted-in customers with approved WhatsApp templates.
-- **Automate the rest.** Workflows run steps on their own, such as confirming cash-on-delivery orders or following up on abandoned carts.
-- **Sell from conversations.** [Connect Shopify](/commerce/shopify/) so agents and your team see products, orders and carts.
+- **Know your customers.** Every conversation is tied to a [contact](/contacts/contacts/) with [tags](/contacts/tags/), [attributes](/contacts/attributes/) and [segments](/contacts/segments/).
+- **Send campaigns.** Message [opted-in customers](/contacts/subscribers/) with approved [WhatsApp templates](/campaigns/whatsapp-templates/), and upsell on your store with [web campaigns](/campaigns/web-campaigns/).
+- **Automate the rest.** [Workflows](/workflows/how-workflows-run/) run steps on their own, such as [confirming orders or following up on abandoned carts](/workflows/automations/).
+- **Sell from conversations.** Connect [Shopify](/commerce/shopify/), [WooCommerce](/commerce/woocommerce/) or [Magento](/commerce/magento/) so agents and your team see [products, orders and carts](/commerce/catalog/).
+- **See what's working.** [Reports and dashboards](/reports/reports-and-dashboards/) show response times, what your AI agent resolves, and where revenue comes from.
+- **Answer from your phone.** [Install Fufa on your phone](/start/install-on-your-phone/) and [turn on notifications](/inbox/notifications/).
+
+New to the app? Start with [Find your way around Fufa](/start/tour/).
 
 ## Reading these docs with an AI assistant
 
@@ -66,3 +70,11 @@ Fufa is built for online stores, especially Shopify stores, that talk to custome
 ### Do I need an AI agent to use Fufa?
 
 No. You can run Fufa as a shared inbox only. Agents are optional, and you choose which channels an agent replies on.
+
+### Is there a Fufa mobile app?
+
+Fufa isn't in the App Store or Google Play. You install it from your phone's browser at apps.fufa.ai, and it then opens from your home screen like any other app. See [Install Fufa on your phone](/start/install-on-your-phone/).
+
+### How do I get notified about new messages?
+
+Go to **Settings → Profile → Notifications**, choose which events notify you, and allow notifications on each device. On iPhone, install Fufa on your home screen first. See [Turn on notifications](/inbox/notifications/).

@@ -29,7 +29,9 @@ Your teammate gets an email. They open it, sign in with the invited address, and
 | **Owner** | Everything, including billing. The person who created the workspace. The owner role can't be changed. |
 | **Admin** | Full access to all settings and features: channels, inboxes, team, agents, workflows, campaigns and billing. |
 | **Supervisor** | Manages conversations and works with agents and workflows. Can view billing but not change it. |
-| **Agent** | Views and replies to conversations in their inboxes. |
+| **Agent** | Views and replies to the conversations assigned to them, in their inboxes. |
+
+For everything each role can do, see [Roles and permissions](/workspace/roles/).
 
 ## Change a role or inbox access
 
@@ -55,5 +57,6 @@ Yes. A person can be invited to several workspaces and switch between them. Thei
 
 ## Related
 
+- [Roles and permissions](/workspace/roles/)
 - [Reply from the inbox](/inbox/reply/)
 - [Create a workspace](/start/create-a-workspace/)

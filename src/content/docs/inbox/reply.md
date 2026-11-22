@@ -60,6 +60,8 @@ No. Notes are visible only to your team and are never sent to the contact.
 
 ## Related
 
+- [Views and assignment](/inbox/views-and-assignment/)
+- [Turn on notifications](/inbox/notifications/)
 - [Invite your team](/workspace/team/)
 - [Create an agent](/agents/create-an-agent/)
 - [Connect WhatsApp](/channels/whatsapp/)
