@@ -11,15 +11,16 @@ Your Shopify store is connected to Fufa. Fufa imports your catalogue and orders 
 
 - You need the **Owner** or **Admin** role in the Fufa workspace.
 - You need to be able to install apps on the Shopify store, as the store owner or as a staff member with app permissions.
-- Your store's Shopify address, such as `your-store.myshopify.com`. You'll find it in your Shopify admin's address bar.
 
 ## Connect from Fufa
 
-1. Go to **Settings → Ecommerce** and select **Add store**.
-2. Choose **Connect Shopify**.
-3. Under **Store Domain**, enter your full Shopify address, such as `mystore.myshopify.com`, and select **Connect**.
-4. Shopify asks you to approve the Fufa app. Approve it.
-5. You're sent back to Fufa, which shows **Store connected successfully!**
+1. Go to **Settings → Ecommerce**. If you already have a store connected, select **Add store**.
+2. Choose **Shopify**.
+
+   ![The Connect Store dialog with Shopify, WooCommerce and Magento](../../../assets/screens/commerce/shopify/connect.png)
+
+3. Fufa opens the Fufa AI app in the Shopify App Store in a new tab. Install it on your store and approve the permissions Shopify asks for.
+4. Shopify sends you back to Fufa, signed in, with your store connected.
 
 New workspaces can also connect Shopify in the setup thread at the top of the inbox. See [Create a workspace](/start/create-a-workspace/).
 
@@ -38,7 +39,7 @@ With the store connected:
 Shopify keeps app embeds off until you turn them on. To show Fufa's chat on your store:
 
 1. In Shopify, open **Online Store → Themes → Customize**.
-2. Open **App embeds**, turn on Fufa's **Chat** embed, and select **Save**.
+2. Open **App embeds**, turn on Fufa's **Chat widget** embed, and select **Save**.
 
 The live chat page explains the chat's own settings. See [Add live chat to your website](/channels/live-chat/).
 
