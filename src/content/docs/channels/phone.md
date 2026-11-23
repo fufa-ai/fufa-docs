@@ -18,7 +18,7 @@ Calls to your phone number are answered by a Fufa voice agent. The number is con
 1. Go to **Settings → Inboxes** and open an inbox.
 2. Under **Channels**, select **Add channel**, then **Phone / Voice**.
 
-   ![Add communication channel with Email, Telegram and Phone / Voice](../../../assets/screens/channels/phone/add-channel.png)
+   ![Add communication channel with WhatsApp Business, Email, Messenger (Soon), Instagram DMs, Telegram and Phone / Voice](../../../assets/screens/channels/phone/add-channel.png)
 
 3. Choose how to bring the number in:
    - **Import from SIP trunk** brings in a number from your own carrier's trunk. Enter the **Phone number** in international format, such as `+14155551234`. Then enter the trunk's **Termination URI**, such as `your-trunk.pstn.twilio.com`, with its **SIP username** and **SIP password**.
