@@ -39,6 +39,29 @@ const sidebar = GROUPS.filter(([dir]) => dir === 'start' || hasPages(dir)).map((
 			: [{ autogenerate: { directory: dir } }],
 }));
 
+// Opens the Fufa chat widget when the page was reached through a link with ?chat=open or #chat.
+// The widget has no public open() yet, so this presses its launcher the way a reader would:
+// the launcher fires a `toggle` event that the widget listens for. If a later widget version
+// adds FufaWidget.open(), that's used instead. The flag is then removed from the address bar,
+// so reloading or sharing the page doesn't reopen the chat.
+const OPEN_CHAT_FROM_LINK = `(() => {
+	const url = new URL(location.href);
+	const asked = url.searchParams.get('chat') === 'open' || url.hash === '#chat';
+	if (!asked) return;
+	url.searchParams.delete('chat');
+	if (url.hash === '#chat') url.hash = '';
+	history.replaceState(history.state, '', url);
+	let tries = 0;
+	const open = () => {
+		if (window.FufaWidget && typeof window.FufaWidget.open === 'function') return window.FufaWidget.open();
+		const launcher = document.querySelector('chat-widget')?.shadowRoot?.querySelector('chat-launcher');
+		if (launcher) return launcher.dispatchEvent(new CustomEvent('toggle', { bubbles: true }));
+		if (++tries < 40) setTimeout(open, 250);
+	};
+	if (document.readyState === 'complete') open();
+	else addEventListener('load', open);
+})();`;
+
 // https://astro.build/config
 export default defineConfig({
 	site: SITE,
@@ -75,6 +98,9 @@ export default defineConfig({
 						async: true,
 					},
 				},
+				// Links from outside the docs can open the chat on arrival: add ?chat=open (or #chat)
+				// to any docs URL, e.g. https://docs.fufa.ai/channels/whatsapp/?chat=open.
+				{ tag: 'script', content: OPEN_CHAT_FROM_LINK },
 			],
 			plugins: [
 				starlightLlmsTxt({
