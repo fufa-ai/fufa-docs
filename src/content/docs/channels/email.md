@@ -19,6 +19,9 @@ Customers email an address you choose, and those emails arrive in a Fufa inbox a
 3. Choose how to start:
    - **Use a Fufa address** works instantly, with nothing to configure. You can add your own domain later, and conversations stay in the same inbox.
    - **Use your own domain** lets customers see your brand, and replies are signed for your domain so they land in the inbox rather than spam.
+
+   ![Connect email: Use a Fufa address or Use your own domain](../../../assets/screens/channels/email/connect-email.png)
+
 4. Enter the **Email address** and the **Sender name** customers see next to it, then finish the steps on screen.
 
 ## Set up your own domain
@@ -32,6 +35,8 @@ If you chose your own domain, the channel page walks you through two things.
 ## Set your sender details
 
 Under **Sender**, set the **Sender name** and a **Signature**. They're used on every reply, whether you or your agent sends it.
+
+![An email channel page with Your address, Receiving and Sending status, and the Sender settings](../../../assets/screens/channels/email/email-channel.png)
 
 ## Check it works
 

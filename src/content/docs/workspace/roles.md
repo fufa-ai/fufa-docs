@@ -18,6 +18,8 @@ You know what each role can do before you give it to a teammate. Every person in
 - **Supervisor**: runs the team and the automation. Sees every conversation, shapes agents and workflows, but doesn't send campaigns or manage billing.
 - **Agent**: answers the customers whose conversations are assigned to them.
 
+![Choosing Admin, Supervisor or Agent when inviting a teammate](../../../assets/screens/workspace/roles/choose-role.png)
+
 ## What each role can do
 
 **Full** means view, create, change and delete. **Edit** means view, create and change, but not delete. **View** means view only.

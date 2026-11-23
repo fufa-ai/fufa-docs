@@ -20,6 +20,8 @@ Your teammates join your workspace and share the inbox. Each one has a role that
 4. Under **Inbox access settings**, select the inboxes they should work in.
 5. Select **Send invitation**. Fufa shows **Invitation sent successfully**.
 
+   ![Invite team members with Email address, the role and the inboxes to give access to](../../../assets/screens/workspace/team/invite-member.png)
+
 Your teammate gets an email. They open it, sign in with the invited address, and join your workspace. Until then, the invitation is listed under **Settings → Team**, where you can cancel it.
 
 ## Roles
@@ -36,6 +38,9 @@ For everything each role can do, see [Roles and permissions](/workspace/roles/).
 ## Change a role or inbox access
 
 1. In **Settings → Team**, open the teammate.
+
+   ![Manage Team with each member, their role and the Invite member button](../../../assets/screens/workspace/team/team.png)
+
 2. In **Edit team member**, change the **Role** or the **Inboxes** they can access.
 3. Select **Save changes**.
 

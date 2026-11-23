@@ -26,6 +26,9 @@ Anyone with the token controls the bot, so keep it private.
 1. Go to **Settings → Inboxes** and open an inbox.
 2. Under **Channels**, select **Add channel**, then **Telegram**.
 3. Paste the token under **Paste the bot token** and select **Connect bot**.
+
+   ![Connect a Telegram bot: Open BotFather, then paste the bot token and select Connect bot](../../../assets/screens/channels/telegram/connect-telegram.png)
+
 4. Fufa shows the bot's chat link and a QR code. Select **Open in Telegram**, or scan the code with your phone, and send your bot a message. It shows up in this inbox.
 
 ## Set up the bot's profile

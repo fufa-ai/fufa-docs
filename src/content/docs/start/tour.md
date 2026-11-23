@@ -16,6 +16,8 @@ You know what each section of Fufa is for, where it sits in the app, and which p
 
 Every conversation from every connected channel lands here: WhatsApp, live chat, Instagram, email, Telegram and phone. You reply, leave notes for your team, assign, snooze and close conversations, and take over from an AI agent.
 
+![The Fufa inbox: the sidebar, inbox views, the conversation list, a conversation and the contact's details](../../../assets/screens/start/tour/app.png)
+
 The views on the left are **All conversations**, **Assigned to me**, **Unassigned**, **Unread**, **Watchlist**, **Trash** and **Spam**. **All conversations** appears only for roles that can see every conversation: **Owner**, **Admin** and **Supervisor**. The **Agent** role sees only the conversations assigned to them.
 
 Start with [Reply from the inbox](/inbox/reply/) and [Views and assignment](/inbox/views-and-assignment/).
@@ -76,6 +78,8 @@ Everything you set up once, grouped into sections:
 ## On your phone
 
 On a phone, the tabs at the bottom are **Inbox**, **Contacts** (or **Customers**), **Campaigns**, **Settings** and **More**. **More** holds **Workflows**, **AI Agents**, **Commerce**, your **Notifications** and **Account**. To get Fufa on your home screen, see [Install Fufa on your phone](/start/install-on-your-phone/).
+
+![Fufa on a phone: the More tab with Workflows, AI Agents, Commerce, Notifications and Account, and the tab bar](../../../assets/screens/start/install-on-your-phone/phone-more.png)
 
 ## Common questions
 

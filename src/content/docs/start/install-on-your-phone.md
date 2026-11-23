@@ -43,6 +43,8 @@ In Chrome or Edge, open [apps.fufa.ai](https://apps.fufa.ai) and select the inst
 
 Open Fufa from the home screen icon. It opens without the browser's address bar, and the tabs at the bottom show **Inbox**, **Contacts**, **Campaigns**, **Settings** and **More**. Then [turn on notifications](/inbox/notifications/) so new messages reach you.
 
+![Fufa on a phone: the inbox, with Inbox, Customers, Campaigns, Settings and More along the bottom](../../../assets/screens/start/install-on-your-phone/phone-inbox.png)
+
 ## Common questions
 
 ### Is there a Fufa app in the App Store or Google Play?

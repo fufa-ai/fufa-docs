@@ -26,6 +26,8 @@ The WhatsApp channel page now shows your account details: **Status**, **Quality*
 
 If the channel page shows **Phone number not verified**, Meta has not confirmed you own the number yet.
 
+![A WhatsApp channel page with the Phone number not verified banner and Verify Now, and the account's Status, Quality, Daily Limit and Verification](../../../assets/screens/channels/whatsapp/whatsapp-channel.png)
+
 1. Select **Verify Now**.
 2. Choose **SMS** or **Voice Call**. A voice call is more reliable for numbers used only with the API.
 3. Enter the 6-digit code and select **Verify Code**.
