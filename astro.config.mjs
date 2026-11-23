@@ -65,6 +65,16 @@ export default defineConfig({
 				{ tag: 'meta', attrs: { property: 'og:site_name', content: 'Fufa Docs' } },
 				{ tag: 'meta', attrs: { name: 'twitter:card', content: 'summary' } },
 				{ tag: 'link', attrs: { rel: 'alternate', type: 'text/plain', title: 'llms.txt', href: '/llms.txt' } },
+				// Fufa's own live chat, so readers can ask a question from any docs page.
+				{
+					tag: 'script',
+					attrs: {
+						'data-api-url': 'https://api.fufa.ai/api',
+						src: 'https://widget.fufa.ai/snippet.js',
+						'data-widget-id': 'wid_hjfxtgn1xxlqcjkgh1tfoccb',
+						async: true,
+					},
+				},
 			],
 			plugins: [
 				starlightLlmsTxt({
