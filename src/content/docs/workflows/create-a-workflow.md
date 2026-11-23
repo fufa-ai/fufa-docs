@@ -22,11 +22,19 @@ You have your own automation, built step by step on a canvas. For example: when 
 
 The workflow opens on the canvas as a draft.
 
+![A workflow on the canvas: an Order created trigger connected to a Send email step, with the canvas controls below](../../../assets/screens/workflows/create-a-workflow/canvas.png)
+
 ## Build it on the canvas
 
 1. **Pick the trigger.** In **Select Trigger**, choose what starts a run, from **Built-in** or **Ecommerce**. For example, **Message received**, **Contact created**, **Order created** or **Cart abandoned**. Set its options, such as which channels or store it listens to.
-2. **Add steps.** Select the **+** after a step and search for the node you need: an action such as **Send email** or **Add contact tag**, a condition such as **If else** or **Check tag**, or a **Delay**.
-3. **Set each step.** Select a step to open its settings. Insert details from the contact, conversation or order with variables. For an HTTP request, select **Send test request** to try it.
+2. **Add steps.** Drag from the dot on a step's right edge, labelled **Then, do the following** or **Next Step**, and drop it on an empty part of the canvas. In **Add Node**, search for what you need: an action such as **Send email** or **Add contact tag**, a condition such as **If else** or **Check tag**, or a **Delay**.
+
+   ![The Add Node list with built-in actions such as Send message, Send email and Add contact tag](../../../assets/screens/workflows/create-a-workflow/add-node.png)
+
+3. **Set each step.** Select a step to open its settings, then select **Done**. Insert details from the contact, conversation or order with variables. For an HTTP request, select **Send test request** to try it.
+
+   ![A Send email step's settings with Send from, Email template and Variables, beside a preview of the email](../../../assets/screens/workflows/create-a-workflow/step-settings.png)
+
 4. **Branch.** A condition has a path for each outcome. Add the next steps on each path.
 
 Use the controls at the bottom of the canvas to **Undo**, **Redo**, **Search Nodes**, **Tidy Layout** or **Fit to View**. To rename a step, select **Edit label** on it.

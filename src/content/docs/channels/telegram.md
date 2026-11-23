@@ -35,6 +35,8 @@ Anyone with the token controls the bot, so keep it private.
 
 Customers see the bot's photo, a short bio, and the text shown before they tap **Start**. Change these by messaging @BotFather. The **Bot profile** section on the channel page links to it.
 
+![A Telegram channel page with the bot's chat link, Connection checks for Bot token and Incoming messages, and the Bot profile commands](../../../assets/screens/channels/telegram/telegram-channel.png)
+
 Share the bot's **Chat link**, `t.me/` followed by its username, on your website, in your Instagram bio, or in order emails.
 
 ## Check it works

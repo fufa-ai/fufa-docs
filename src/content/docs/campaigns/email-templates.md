@@ -32,6 +32,9 @@ Designs marked **Verify your domain to send this** are promotional. They need yo
 1. Enter a **Template name** your team will recognise.
 2. Write the **Subject**, and optional **Preview text**, the line mail apps show after the subject.
 3. Under **Content**, change each block or add new ones: **Heading**, **Text**, **Image**, **Button**, **Products**, **Order summary**, **Discount code**, **Divider** and **Spacer**.
+
+   ![Design your email: the email preview beside the Subject, Preview text and Content blocks](../../../assets/screens/campaigns/email-templates/editor.png)
+
    - In **Products**, choose what to **Show**: **Products you pick**, **A collection**, **Bestsellers**, **The contact's cart** or **The contact's order**.
    - In **Discount code**, enter a **Code** you've already created in your store.
 4. Type `{{` in a text field to insert a contact's details, such as their first name. Under **Placeholder values**, set what customers see when a value is missing.
@@ -42,6 +45,8 @@ The header and footer come from your brand kit. Every email has an unsubscribe l
 ## Preview and test
 
 Switch between **Desktop** and **Mobile**, and use **Preview as** to see the email filled in for a **Sample contact**. Select **Send test to me** to get it in your own inbox.
+
+![The email editor with the Mobile preview selected](../../../assets/screens/campaigns/email-templates/editor-mobile.png)
 
 ## Send it
 

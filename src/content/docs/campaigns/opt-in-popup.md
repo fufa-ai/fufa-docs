@@ -35,6 +35,9 @@ Shopify keeps app embeds off until you turn them on, once per theme.
 5. Under **Appearance**, set the look to match your store.
 6. Under **Display Rules**, choose **Show popup when…**: **Immediately on page load**, **When user scrolls down**, **After a time delay**, or **When user tries to leave**. Then choose **How often should the same visitor see it?**: **Only once**, **Every page load** or **Every X days**.
 7. Under **Offer & Publish**, optionally add an **Offer Coupon Code**, such as *WELCOME10*, and turn on **Publish Now** to show the popup as soon as you save.
+
+   ![The New Popup dialog's Form Fields, Appearance, Display Rules and Offer & Publish sections](../../../assets/screens/campaigns/opt-in-popup/offer-and-publish.png)
+
 8. Select **Create Popup**.
 
 To change a popup later, select **Edit** on its row.

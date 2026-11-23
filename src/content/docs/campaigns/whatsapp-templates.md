@@ -31,12 +31,16 @@ You have a WhatsApp template that Meta has approved. You use it to send campaign
    - **Authentication** for verification codes.
 5. Select **Continue**.
 
+   ![Create your template with Business Account, Template Name, Language and the Marketing, Utility and Authentication categories](../../../assets/screens/campaigns/whatsapp-templates/create-your-template.png)
+
 ## Design the message
 
 1. Optionally add a **Header**: **Headline**, **Image**, **Video** or **PDF**.
 2. Write the **Message Body**. Type `{{` to insert a contact attribute, such as the customer's first name.
 3. Optionally **Add footer**, a short line under the message.
 4. Optionally add buttons, such as a link to your website, a phone number, or **Copy Code** for a discount code. Turn on **Track clicks** on a link button to see who tapped it in your campaign results.
+
+   ![Design your template with the Message Body, Header, footer and buttons, and a preview of the WhatsApp message](../../../assets/screens/campaigns/whatsapp-templates/design-your-template.png)
 
 The preview on the right shows how the message will look on a phone.
 

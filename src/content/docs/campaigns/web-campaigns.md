@@ -20,15 +20,33 @@ When a shopper adds a product to their cart, a popup on your Shopify store sugge
    ![The Web campaigns list with the Enable web campaigns on your Shopify theme card](../../../assets/screens/campaigns/web-campaigns/web-campaigns.png)
 
 2. **Details**: enter a **Campaign name**, such as *Board + bindings 10% off*, and choose the **Store**. You can't change the store once the campaign is live.
+
+   ![Step 1, Name your campaign, with Campaign name, Store and a preview of the popup](../../../assets/screens/campaigns/web-campaigns/details.png)
+
 3. **Offer**: choose the **Offer type**:
    - **Frequently bought together**: up to 3 items added in one tap. Best for bundles.
    - **You may also like**: up to 4 picks, each added on its own. Best for discovery.
 
    Then write the **Title** and an optional **Description**.
+
+   ![Step 2, What should the popup offer?, with Frequently bought together and You may also like](../../../assets/screens/campaigns/web-campaigns/offer.png)
+
 4. **Trigger**: choose which add-to-cart opens the popup: **Any product**, **Specific products** (up to 250), or **A collection**.
-5. **Products**: choose **Pick products** to choose them yourself, or **Smart picks** to let Fufa match each add-to-cart with the best products from your store. With **Smart picks**, choose **Goes well with it** or **Similar to it**. Products already in the cart are skipped.
+
+   ![Step 3, When should it show?, with Any product, Specific products and A collection](../../../assets/screens/campaigns/web-campaigns/trigger.png)
+
+5. **Products**: choose **Pick products** to choose them yourself, or **Smart picks** to let Fufa match each add-to-cart with the best products from your store. With **Smart picks**, choose **Goes well with it** or **Similar to it**. Products already in the cart are skipped. With **Smart picks**, also add at least one backup product. Fufa uses backups to fill empty spots when there aren't enough matches.
+
+   ![Step 4, Which products to suggest?, with Smart picks, Goes well with it, products per popup and a backup product](../../../assets/screens/campaigns/web-campaigns/products.png)
+
 6. **Discount**: optionally add a discount on the suggested products. Fufa creates the Shopify discount code and applies it in the shopper's cart.
+
+   ![Step 5, Give a reason to add more, with No discount, Percentage off and Amount off](../../../assets/screens/campaigns/web-campaigns/discount.png)
+
 7. **Display**: choose when it shows after the add to cart (**Right away**, **After a delay**, **After scrolling** or **When leaving the page**), **How often** (**Once per page**, **Once per visitor** or **Every few days**), and the **Primary color**.
+
+   ![Step 6, Timing and style, with After the add to cart, How often and Primary color, and the Publish button](../../../assets/screens/campaigns/web-campaigns/display.png)
+
 8. Select **Publish**. Fufa shows **Your campaign is live**.
 
 ## Follow the results
