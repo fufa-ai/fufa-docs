@@ -30,6 +30,8 @@ Instagram only delivers DMs to tools you allow.
 
 Without this, Instagram won't deliver DMs to Fufa, even though the channel shows as connected.
 
+![An Instagram channel page with the account profile and the Setup card for Meta connection and Allow access to messages](../../../assets/screens/channels/instagram/instagram-channel.png)
+
 ## Check it works
 
 From another Instagram account, send your business account a DM. It appears in the inbox within a few seconds. Reply from Fufa, and the reply shows up in Instagram.

@@ -8,15 +8,16 @@ The sidebar follows a new customer through the product. One folder per group und
 
 | Folder | Group | What belongs here |
 | --- | --- | --- |
-| `start/` | Start | Create a workspace, a one-page tour of the inbox. The only overview pages. |
+| `start/` | Start | Create a workspace, a tour of the app's sections, install Fufa on your phone. The only overview pages. |
 | `channels/` | Channels | One page per channel a customer can turn on today. |
-| `inbox/` | Inbox | Reply, assign, status, team hours and handover, canned responses. |
-| `contacts/` | Contacts | Contacts, tags, attributes, segments. |
-| `campaigns/` | Campaigns | Send a campaign, WhatsApp templates, the opt-in popup. |
+| `inbox/` | Inbox | Reply, assign, status, team hours and handover, canned responses, notifications. |
+| `contacts/` | Contacts | Contacts, tags, attributes, segments, subscribers, reviews. |
+| `campaigns/` | Campaigns | Send a campaign, WhatsApp and email templates, the opt-in popup, web campaigns. |
 | `agents/` | Agents | Create, knowledge, actions and connectors, test, deploy, voice. |
 | `workflows/` | Workflows | How a run moves, then only triggers and actions a customer sets up alone. |
-| `commerce/` | Commerce | Shopify, catalog, orders, abandoned carts. |
-| `workspace/` | Workspace | Team and roles, billing and credits, workspace settings. |
+| `commerce/` | Commerce | Shopify, WooCommerce, Magento, catalog, orders, abandoned carts. |
+| `reports/` | Reports | Reports and dashboards. |
+| `workspace/` | Workspace | Team and roles, billing and credits, workspace settings, integrations. |
 | `mcp/` | Fufa MCP | What the MCP server can do, connecting Claude and other clients, example prompts. |
 
 A page shows up in the sidebar because its file exists. Set its position with `sidebar.order` in the frontmatter. A group with no pages stays hidden. When you add the first page to an empty group, restart `pnpm dev` so the group appears.

@@ -18,6 +18,8 @@ You answer a customer from Fufa, and your reply goes out on the channel they wro
 2. The list shows **Open** conversations. Switch to **Snoozed** or **Closed** to see the others, and use **Sort by** for **Latest**, **Oldest** or **Priority**.
 3. Select a conversation. To skim it first, use **Preview AI summary** in the list. Fufa writes the summary as the conversation progresses.
 
+   ![A conversation open in the inbox, with the composer set to Reply and the contact's details beside it](../../../assets/screens/inbox/reply/conversation.png)
+
 ## Reply
 
 1. In the composer at the bottom, make sure **Reply** is selected.
@@ -60,6 +62,8 @@ No. Notes are visible only to your team and are never sent to the contact.
 
 ## Related
 
+- [Views and assignment](/inbox/views-and-assignment/)
+- [Turn on notifications](/inbox/notifications/)
 - [Invite your team](/workspace/team/)
 - [Create an agent](/agents/create-an-agent/)
 - [Connect WhatsApp](/channels/whatsapp/)

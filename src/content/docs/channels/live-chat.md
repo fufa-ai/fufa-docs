@@ -23,6 +23,8 @@ If you connected Shopify while [creating your workspace](/start/create-a-workspa
 5. If you sell on Shopify, choose your **Connected store** so the chat knows your products and orders.
 6. Select **Create Live Chat Widget**. Fufa shows **Live chat channel created**.
 
+   ![A Live Chat channel's General tab with the Shopify theme card, Business identity and Allowed origins](../../../assets/screens/channels/live-chat/live-chat-channel.png)
+
 Each inbox can hold one live chat.
 
 ## Make it look like your brand
@@ -42,7 +44,7 @@ All of these are optional. The **Live preview** shows changes before you select 
 <script data-api-url="https://api.fufa.ai/api" src="https://widget.fufa.ai/snippet.js" data-widget-id="YOUR_WIDGET_ID" async></script>
 ```
 
-**On Shopify**: open your theme editor's **App embeds**, turn on Fufa's **Chat** embed, and save the theme. App embeds are off by default, so the chat stays hidden until you turn it on.
+**On Shopify**: open your theme editor's **App embeds**, turn on Fufa's **Chat widget** embed, and save the theme. App embeds are off by default, so the chat stays hidden until you turn it on.
 
 To keep the chat off certain pages, such as checkout, add rules under **Hide widget on pages**.
 

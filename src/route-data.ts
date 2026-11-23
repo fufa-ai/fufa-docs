@@ -15,6 +15,7 @@ const GROUP_LABELS: Record<string, string> = {
 	agents: 'Agents',
 	workflows: 'Workflows',
 	commerce: 'Commerce',
+	reports: 'Reports',
 	workspace: 'Workspace',
 	mcp: 'Fufa MCP',
 };

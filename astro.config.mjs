@@ -20,6 +20,7 @@ const GROUPS = [
 	['agents', 'Agents'],
 	['workflows', 'Workflows'],
 	['commerce', 'Commerce'],
+	['reports', 'Reports'],
 	['workspace', 'Workspace'],
 	['mcp', 'Fufa MCP'],
 ];
@@ -37,6 +38,29 @@ const sidebar = GROUPS.filter(([dir]) => dir === 'start' || hasPages(dir)).map((
 			? [{ label: 'What is Fufa', slug: 'index' }, { autogenerate: { directory: dir } }]
 			: [{ autogenerate: { directory: dir } }],
 }));
+
+// Opens the Fufa chat widget when the page was reached through a link with ?chat=open or #chat.
+// The widget has no public open() yet, so this presses its launcher the way a reader would:
+// the launcher fires a `toggle` event that the widget listens for. If a later widget version
+// adds FufaWidget.open(), that's used instead. The flag is then removed from the address bar,
+// so reloading or sharing the page doesn't reopen the chat.
+const OPEN_CHAT_FROM_LINK = `(() => {
+	const url = new URL(location.href);
+	const asked = url.searchParams.get('chat') === 'open' || url.hash === '#chat';
+	if (!asked) return;
+	url.searchParams.delete('chat');
+	if (url.hash === '#chat') url.hash = '';
+	history.replaceState(history.state, '', url);
+	let tries = 0;
+	const open = () => {
+		if (window.FufaWidget && typeof window.FufaWidget.open === 'function') return window.FufaWidget.open();
+		const launcher = document.querySelector('chat-widget')?.shadowRoot?.querySelector('chat-launcher');
+		if (launcher) return launcher.dispatchEvent(new CustomEvent('toggle', { bubbles: true }));
+		if (++tries < 40) setTimeout(open, 250);
+	};
+	if (document.readyState === 'complete') open();
+	else addEventListener('load', open);
+})();`;
 
 // https://astro.build/config
 export default defineConfig({
@@ -64,6 +88,19 @@ export default defineConfig({
 				{ tag: 'meta', attrs: { property: 'og:site_name', content: 'Fufa Docs' } },
 				{ tag: 'meta', attrs: { name: 'twitter:card', content: 'summary' } },
 				{ tag: 'link', attrs: { rel: 'alternate', type: 'text/plain', title: 'llms.txt', href: '/llms.txt' } },
+				// Fufa's own live chat, so readers can ask a question from any docs page.
+				{
+					tag: 'script',
+					attrs: {
+						'data-api-url': 'https://api.fufa.ai/api',
+						src: 'https://widget.fufa.ai/snippet.js',
+						'data-widget-id': 'wid_hjfxtgn1xxlqcjkgh1tfoccb',
+						async: true,
+					},
+				},
+				// Links from outside the docs can open the chat on arrival: add ?chat=open (or #chat)
+				// to any docs URL, e.g. https://docs.fufa.ai/channels/whatsapp/?chat=open.
+				{ tag: 'script', content: OPEN_CHAT_FROM_LINK },
 			],
 			plugins: [
 				starlightLlmsTxt({
@@ -80,6 +117,7 @@ export default defineConfig({
 						{ label: 'Getting live', description: 'The shortest path from sign-up to a live store: workspace, channels, inbox, team, agent and Shopify.', paths: ['index*', 'start/**', 'channels/**', 'inbox/**', 'workspace/**', 'agents/create-an-agent*', 'commerce/shopify*'] },
 						{ label: 'AI agents', description: 'Creating, teaching, testing and deploying Fufa AI agents.', paths: ['agents/**'] },
 						{ label: 'Fufa MCP', description: 'Connecting Claude and other AI clients to a Fufa workspace through the Fufa MCP server, and every tool it offers.', paths: ['mcp/**'] },
+						{ label: 'Using Fufa every day', description: 'Finding your way around, installing Fufa on your phone, notifications, and working the inbox.', paths: ['start/tour*', 'start/install-on-your-phone*', 'inbox/**'] },
 					],
 				}),
 			],

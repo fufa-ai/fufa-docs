@@ -19,6 +19,9 @@ A workspace holds everything for one business: its channels, inbox, contacts, ag
 
 1. Go to [apps.fufa.ai](https://apps.fufa.ai).
 2. Enter your email address and continue. Fufa emails you a verification code. You can also choose **Continue with Google** instead.
+
+   ![The Fufa sign-in screen with an email field, Send verification code and Continue with Google](../../../assets/screens/start/create-a-workspace/sign-in.png)
+
 3. Enter the code under **Verification code** and select **Verify Code**.
 4. Fill in **First name**, **Last name** and **Company name**, then select **Create Workspace**.
 
