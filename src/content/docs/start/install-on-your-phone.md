@@ -20,8 +20,14 @@ Fufa isn't in the App Store or Google Play. You install it from your phone's bro
 ## Install on iPhone or iPad
 
 1. Open Safari and go to [apps.fufa.ai](https://apps.fufa.ai). Sign in.
-2. Tap the **Share** button, the square with an arrow pointing up.
+2. Tap the **⋯** button in Safari's toolbar, then **Share**. On older iOS versions, tap the **Share** button, the square with an arrow pointing up, directly.
+
+   ![Safari's ⋯ menu open over Fufa, with Share below Ask Siri and Translate Website](../../../assets/screens/start/install-on-your-phone/ios-safari-menu.png)
+
 3. Scroll down and tap **Add to Home Screen**.
+
+   ![The share sheet for Fufa AI at apps.fufa.ai, with Add to Home Screen below Add to Favorites and Find on Page](../../../assets/screens/start/install-on-your-phone/ios-share-sheet.png)
+
 4. Keep the name **Fufa AI** and tap **Add**.
 
 Open Fufa from the new icon on your home screen. On iPhone, the installed app keeps its own sign-in, separate from Safari's, so sign in once more there.
@@ -57,7 +63,7 @@ No. Fufa updates itself. The next time you open it after a release, you get the 
 
 ### I don't see Add to Home Screen on my iPhone. What now?
 
-Make sure you're in Safari, not another browser or an app's built-in browser. Open apps.fufa.ai in Safari, tap **Share**, and scroll down the list of actions to find **Add to Home Screen**.
+Make sure you're in Safari, not another browser or an app's built-in browser. Open apps.fufa.ai in Safari, tap **⋯** then **Share** (or the **Share** button on older iOS), and scroll down the list of actions to find **Add to Home Screen**.
 
 ### Do I have to install Fufa to get notifications on my iPhone?
 

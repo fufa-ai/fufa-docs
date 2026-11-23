@@ -68,7 +68,7 @@ Ask a teammate to assign you a conversation, or send a message to one of your ch
 
 ### Why am I not getting notifications on my iPhone?
 
-On iPhone and iPad, notifications only work when Fufa is installed on your home screen, on iOS 16.4 or later. Install it from Safari with **Share → Add to Home Screen** and open Fufa from the new icon. Then go to **Settings → Profile → Notifications**, select **Grant permissions** or turn on a **Desktop** switch, and choose **Allow**.
+On iPhone and iPad, notifications only work when Fufa is installed on your home screen, on iOS 16.4 or later. Install it from Safari with **⋯ → Share → Add to Home Screen** and open Fufa from the new icon. Then go to **Settings → Profile → Notifications**, select **Grant permissions** or turn on a **Desktop** switch, and choose **Allow**.
 
 ### Why don't I get notified about every new message?
 
